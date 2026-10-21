@@ -108,3 +108,73 @@ footer {
     background-color: var(--secondary-color);
     color: var(--white);
 }
+/* =======================================================
+   DISEÑO ADAPTABLE Y RESPONSIVO (Media Queries)
+   ======================================================= */
+
+/* 📱 1. CELULARES Y PANTALLAS PEQUEÑAS (Pantallas de 600px o menos) */
+@media (max-width: 600px) {
+    
+    /* El encabezado pasa de horizontal a vertical */
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    /* El menú de navegación se acomoda en lista vertical */
+    nav ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    /* La sección principal (Hero) apila el texto y la foto verticalmente */
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 2rem 1rem;
+        gap: 1.5rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.6rem;
+    }
+
+    /* Tamaño de foto adaptado para celular */
+    .hero-image img {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* Las tarjetas de proyectos y habilidades ocupan el 100% del ancho */
+    .skills-grid, .projects-grid {
+        flex-direction: column;
+    }
+
+    .skill-card, .project-card {
+        width: 100%;
+    }
+
+    .seccion {
+        padding: 2rem 1rem;
+    }
+}
+
+/* 📑 2. TABLETS Y PANTALLAS MEDIANAS (Pantallas entre 601px y 992px) */
+@media (min-width: 601px) and (max-width: 992px) {
+    
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Las tarjetas de proyectos se acomodan en 2 columnas */
+    .skills-grid, .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .skill-card, .project-card {
+        flex: 1 1 45%; /* Ocupa casi la mitad de la pantalla */
+    }
+}
