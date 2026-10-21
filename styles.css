@@ -26,6 +26,27 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* =======================================================
+   EFECTO MARCA DE AGUA EN EL FONDO DE PANTALLA
+   ======================================================= */
+body::before {
+    content: "";
+    position: fixed;               /* Mantiene la marca de agua fija al hacer scroll */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('img/marca-agua.png'); /* Ruta a tu imagen dentro de img/ */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;        /* Ajusta la imagen a toda la pantalla */
+    opacity: 0.07;                 /* Transparencia muy tenue (7%) para no opacar el texto */
+    z-index: -1;                   /* Se coloca por detrás de todo el contenido */
+    pointer-events: none;          /* Evita interferir con los clics */
 }
 
 /* =======================================================
