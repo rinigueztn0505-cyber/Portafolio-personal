@@ -27,3 +27,84 @@ img {
     margin: 0 auto 1rem;
     box-sizing: border-box;
 }
+/* Variables CSS */
+:root {
+    --primary-color: #144d9c;
+    --secondary-color: #0d2c5a;
+    --bg-color: #f2f6fa;
+    --text-color: #333333;
+    --white: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header con Flexbox */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Efectos :hover */
+nav a:hover {
+    color: #ffca28;
+}
+
+.seccion {
+    padding: 3rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-grid, .projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.skill-card, .project-card {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex: 1 1 200px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover, .project-card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+    color: var(--white);
+}
