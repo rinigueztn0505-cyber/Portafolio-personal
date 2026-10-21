@@ -1,0 +1,29 @@
+/* 1. Regla general para que NINGUNA imagen se salga de su contenedor */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* 2. Ajuste proporcional para la Foto de Perfil / Avatar */
+.hero-image img {
+    width: 140px;            /* Tamaño controlado para el avatar */
+    height: 140px;           /* Mantiene proporción cuadrada */
+    border-radius: 50%;      /* La hace completamente circular */
+    object-fit: cover;       /* Evita que la foto se estire o distorsione */
+    border: 4px solid var(--primary-color);
+    margin: 0 auto;
+}
+
+/* 3. Ajuste proporcional para las imágenes de los Proyectos (Sesión 2) */
+.project-card img {
+    isplay: block;
+    width: 100%;
+    max-width: 220px;
+    height: 180px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 8px;
+    margin: 0 auto 1rem;
+    box-sizing: border-box;
+}
